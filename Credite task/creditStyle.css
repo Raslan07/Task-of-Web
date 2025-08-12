@@ -1,0 +1,78 @@
+body{
+font-family: "Poppins", sans-serif;    width: 1000px;
+    height: 1000px;
+    background-color: #1d1d1d;
+    color: white;
+    background-image: 
+    repeating-linear-gradient(to right , transparent 0px 99px  , #f8f8f858 101px 100px),
+    repeating-linear-gradient(to bottom , transparent 0px 99px  , #f8f8f858 101px 100px);
+}
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+}
+
+
+.parent{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50% , -50%);
+  max-width: 360px;
+  width: 100%;
+  background-image: url(bg.png);
+  background-size: cover;
+  border-radius:  30px ;
+  min-height: 100hv;
+  padding: 25px;
+  box-shadow: 1px 1px 10px rgba(227, 227, 227, 0.53);
+  color: white;
+  transition: 1s;
+}
+
+.parent:hover{
+    box-shadow: 
+    -10px 0px 10px rgba(255, 0, 0, 0.824),
+    10px -0px 10px rgba(255, 174, 0, 0.824);
+}
+
+.head , .logo{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.master{
+  margin-left: 10px;
+  font-size: 15px;
+}
+
+.logo img{
+  width: 45px;
+}
+.chip{
+  width: 45px;
+}
+
+.parent .details{
+  display: flex;
+    margin-top: 40px;
+    justify-content: space-between;
+    align-items: flex-end;
+    
+}
+.card-number{
+  font-size: 12px;
+}
+
+.number{
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.name{
+  margin-top: 12px;
+  font-size: 17px;
+}
