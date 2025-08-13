@@ -1,0 +1,125 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Work Sans", sans-serif;
+        }
+
+        body {
+            background: linear-gradient(to top, #FAEEFF 65%, transparent 65%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .wrapper {
+            width: 100%;
+            max-width: 1600px;
+            padding: 1rem;
+            position: relative;
+        }
+
+        .wrapper img {
+            width: 100%;
+            height: auto;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        .wrap {
+            background: white;
+            max-width: 600px;
+            width: 100%;
+            margin: 5rem auto;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 0 30px rgba(98, 98, 98, 0.15);
+        }
+
+        .title {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .title::before {
+            content: url(images/icon-star.svg);
+            display: block;
+        }
+
+        .title h1 {
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            font-weight: 900;
+        }
+
+        .QA {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .qa {
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(207, 207, 207, 0.3);
+            position: relative;
+        }
+
+        .qa:last-child {
+            border-bottom: none;
+        }
+
+        .qa p {
+            font-weight: 600;
+            font-size: 1rem;
+            margin-right: 2rem;
+            cursor: pointer;
+        }
+
+        .qa::before {
+            content: url(images/icon-plus.svg);
+            position: absolute;
+            right: 0;
+            top: 0;
+            cursor: pointer;
+        }
+
+        .content {
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin-top: 0.5rem;
+            color: #777;
+            display: none;
+            /* Hide by default for accordion */
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .wrap {
+                padding: 1.5rem;
+                margin: 3rem auto;
+            }
+
+            .qa p {
+                font-size: 0.95rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .title {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .title h1 {
+                font-size: 1.8rem;
+            }
+
+            .qa p {
+                font-size: 0.9rem;
+            }
+        }
