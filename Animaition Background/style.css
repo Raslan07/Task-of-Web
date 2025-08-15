@@ -24,7 +24,9 @@ body {
   background-image: url("https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg");
   background-size: cover;
 }
-
+{
+  
+}
 .split-screen {
   width: 100%;
   background-color: #2c2d2b;
