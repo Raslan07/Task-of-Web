@@ -80,26 +80,3 @@ It also includes a worked example for:
 2. Compute months: `n = years * 12`
 3. Plug into the formulas above.
 
-**Optional JavaScript snippet** (repayment monthly payment):
-
-```js
-function repaymentMonthly(P, annualRatePct, years) {
-  const r = (annualRatePct / 100) / 12;
-  const n = years * 12;
-  return P * (r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
-}
-
-function interestOnlyMonthly(P, annualRatePct) {
-  const r = (annualRatePct / 100) / 12;
-  return P * r;
-}
-```
-
----
-
-## 4) Notes
-
-- Assumes **fixed rate** and **monthly compounding**.
-- Excludes fees, taxes, insurance, and any overpayments.
-- Real‑world products and regulations vary by country/lender.
-
