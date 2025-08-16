@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Mortage Calc</title>
+</head>
+
+<body>
+    <script src="app.js" defer></script>
+
+    <section class="mortgage">
+        <!-- Main Calculator Container -->
+        <div class="calculator-container">
+        
+            <!-- Header Section -->
+            <header class="header">
+                <h1>Mortgage Calculator</h1>
+                <button class="clear-btn">Clear All</button>
+            </header>
+        
+            <!-- Form -->
+            <form class="mortgage-form" action="#" method="POST">
+        
+                <!-- Mortgage Amount Input -->
+                <div class="form-group">
+                    <label for="mortgage-amount" class="form-label">Mortgage Amount</label>
+                    <div class="input-group">
+                        <span class="input-group-text">£</span>
+                        <input type="number" id="mortgage-amount" class="form-control" placeholder="300,000" required>
+                    </div>
+                </div>
+        
+                <!-- Mortgage Term and Interest Rate Inputs (Side-by-side) -->
+                <div class="form-grid form-group">
+                    <div>
+                        <label for="mortgage-term" class="form-label">Mortgage Term</label>
+                        <div class="input-group">
+                            <input type="number" id="mortgage-term" class="form-control" placeholder="25" required>
+                            <span class="input-group-text suffix">years</span>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="interest-rate" class="form-label">Interest Rate</label>
+                        <div class="input-group">
+                            <input type="number" step="0.01" id="interest-rate" class="form-control" placeholder="5.25" required>
+                            <span class="input-group-text suffix">%</span>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Mortgage Type Radio Buttons -->
+                <div class="form-group">
+                    <label class="form-label">Mortgage Type</label>
+                    <div class="radio-group">
+                        <label for="repayment" class="radio-label">
+                            <input type="radio" name="mortgage-type" id="repayment" value="repayment">
+                            <span>Repayment</span>
+                        </label>
+                        <label for="interest-only" class="radio-label">
+                            <input type="radio" name="mortgage-type" id="interest-only" value="interest-only">
+                            <span>Interest Only</span>
+                        </label>
+                    </div>
+                </div>
+        
+                <!-- Submit Button -->
+                <div class="form-group">
+                    <button type="submit" class="submit-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 7V4a2 2 0 0 1 2-2h8.5L20 7.5V20a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-3" />
+                            <polyline points="14 2 14 8 20 8" />
+                            <path d="M8 13.5V18" />
+                            <path d="M11 18h-3" />
+                            <path d="M11 15.5c0-.8-.4-1.5-1-1.5h-1c-.6 0-1 .7-1 1.5v0c0 .8.4 1.5 1 1.5h1c.6 0 1-.7 1-1.5v0Z" />
+                        </svg>
+                        Calculate Repayments
+                    </button>
+                </div>
+            </form>
+        </div>
+
+
+        <div class="beforeResult active">
+            <div class="img">
+                <img src="images/illustration-empty.svg" alt="calc">
+            </div>
+            <h3>Results shown here</h3>
+            <p>Complete the form and click "calculate repayment" to see what your monthly repayment would be.</p>
+        </div>
+
+        <div class="afterResult">
+
+            <div class="result-info">
+                <h2>Your results</h2>
+                <p>Your results are shown below based on the information you provided. To adjust the results, edit the form and click "calculate repayments" again</p>
+            </div>
+
+            <div class="result-calc">
+                <div class="resul-for-month">
+                    <label for="clac2" >Your monthly repayment</label>
+                    <p id="total-1">£<span class="month-1">0</span></p>
+                </div>
+                <div class="result-for-term">
+                    <label for="clac1">Total you'll repay over the term</label>
+                    <p id="total-2">£<span class="month-2">0</span></p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+</body>
+
+</html>

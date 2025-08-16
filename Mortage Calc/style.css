@@ -1,0 +1,407 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap');
+.heebo {
+    font-family: "Heebo", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+}
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Heebo", sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E3F4FC ;
+}
+
+/* section contain all element with grid system desgin */
+
+.mortgage{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: clamp(520px , 85% , 1024px);
+    background-color: white;
+    border-top-right-radius: 25px;
+    border-radius: 30px; /* rounded-2xl */
+}
+
+/* First Column style */
+
+.calculator-container {
+            grid-column: 1 / 2;
+            grid-row: auto;
+            background-color: #ffffff;
+            width: 100%;
+             /* max-w-md */
+            padding: 2rem;
+            border-bottom-left-radius: 30px;
+            border-top-left-radius: 30px;
+        }
+
+        /* Header Section */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .header h1 {
+            font-size: 1.5rem; /* text-2xl */
+            font-weight: 700;
+            color: #1e293b; /* slate-800 */
+        }
+
+        .header .clear-btn {
+            font-size: 0.875rem; /* text-sm */
+            color: #64748b; /* slate-500 */
+            font-weight: 500;
+            background: none;
+            border: none;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .header .clear-btn:hover {
+            color: #1e293b; /* hover:text-slate-800 */
+        }
+
+        /* Form Styling */
+        .mortgage-form .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .mortgage-form .form-group:last-child {
+            margin-bottom: 0;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: #475569; /* slate-600 */
+            margin-bottom: 0.5rem;
+        }
+
+        /* Input Group Styling (for £, years, %) */
+        .input-group {
+            display: flex;
+            align-items: center;
+            border: 1px solid #cbd5e1; /* border-slate-300 */
+            border-radius: 0.5rem; /* rounded-lg */
+            overflow: hidden;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        
+        .input-group:focus-within {
+             border-color: #a3e635; /* A lime green color */
+             box-shadow: 0 0 0 2px rgba(163, 230, 53, 0.3);
+        }
+
+        .input-group-text {
+            background-color: #f1f5f9; /* bg-slate-100 */
+            color: #64748b; /* text-slate-500 */
+            padding: 0.75rem 1rem;
+            border-right: 1px solid #cbd5e1;
+        }
+        
+        .input-group-text.suffix {
+            border-right: none;
+            border-left: 1px solid #cbd5e1;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.75rem;
+            color: #1e293b; /* text-slate-800 */
+            border: none;
+            outline: none;
+            font-size: 1rem;
+        }
+        
+        .form-control::placeholder {
+            color: #94a3b8; /* placeholder-slate-400 */
+        }
+
+        /* Grid for side-by-side inputs */
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        /* Radio Button Styling */
+        .radio-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+        
+        .radio-label {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            border: 1px solid #cbd5e1;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: border-color 0.2s, background-color 0.2s;
+        }
+        
+        .radio-label input[type="radio"] {
+            height: 1rem;
+            width: 1rem;
+            accent-color: #84cc16; /* lime-600 */
+        }
+        
+        .radio-label span {
+            margin-left: 0.75rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #1e293b;
+        }
+
+        .radio-label:has(:checked) {
+            border-color: #84cc16; /* has-[:checked]:border-lime-500 */
+            background-color: #f7fee7; /* has-[:checked]:bg-lime-50 */
+        }
+
+        /* Submit Button */
+        .submit-btn {
+            width: 100%;
+            background-color: #bef264; /* bg-lime-400 */
+            color: #1e293b;
+            font-weight: 700;
+            padding: 1rem;
+            border: none;
+            border-radius: 9999px; /* rounded-full */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            font-size: 1rem;
+        }
+
+        .submit-btn:hover {
+            background-color: #a3e635; /* hover:bg-lime-500 */
+        }
+        
+        .submit-btn svg {
+            margin-right: 0.5rem;
+        }
+
+        /* Responsive adjustments */
+        @media (min-width: 640px) {
+            .calculator-container {
+                padding: 2rem;
+            }
+            .form-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+
+
+
+
+
+
+
+/* Scound Column style */
+
+.beforeResult  {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5rem;
+    background-color: #12303F;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 30px;
+    box-shadow: 0px 0px 5px rgba( 0 0 0 / 0.5);
+    color: white;
+    text-align: center;
+
+}
+
+.beforeResult .img img{
+    width: 150px;
+    height: 150px;
+    margin: 35px 0px 15px 0px;
+}
+
+.beforeResult h3{
+    margin-bottom: 12px;
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
+.beforeResult p{
+    font-size: 0.7rem;
+    font-weight: 300;
+    color: #ffffff87;
+    margin-bottom: 2.5rem;
+}
+
+
+
+/* third page when result output from calculation method */
+
+.afterResult{
+    grid-column: 2 / 3;
+    grid-row: auto;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: #12303F;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 30px;
+    box-shadow: 0px 0px 5px rgba( 0 0 0 / 0.5);
+    color: white;
+    padding: 15px;
+    
+
+}
+
+.afterResult .result-info{
+    width: inherit;
+    margin-top: 20px;
+    margin-bottom: 30px;
+
+}
+
+.afterResult .result-info h2{
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+.afterResult .result-info p{
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+    color: #808893;
+}
+
+.afterResult .result-calc{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px 20px 0px 20px;
+    background-color: #0E2532;
+    width: 100%;
+    height: 220px;
+    border-radius: 0.875rem;
+    border-top: 4px solid #84cc16;
+}
+.afterResult .resul-for-month{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+}
+.afterResult .result-calc label{
+    font-size: 0.7rem;
+    margin-top: 20px;
+    color: #8a9face7;
+}
+
+.afterResult .resul-for-month #total-1{
+    background-color: transparent;
+    width: 100%;
+    height: 70px;
+    line-height: 2.1;
+    overflow: hidden;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #84cc16;
+}
+
+.afterResult .resul-for-month::after{
+    content: "";
+    position: absolute;
+    width: 100% ;
+    height: 1px;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(181, 181, 181, 0.466);
+    
+}
+
+.result-calc .result-for-term{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-weight: 700;
+}
+.result-calc .resul-for-term #total-2{
+    margin-top: 50px;
+    font-size: 0.80rem;
+}
+
+.active{
+    display: flex;
+}
+
+@media (max-width: 768px) {
+  .mortgage {
+    grid-template-columns: 1fr; /* single column */
+    width: 95%;
+    border-radius: 20px;
+   
+  }
+
+  .calculator-container {
+    border-radius: 20px 20px 0 0; /* round top */
+  }
+
+  .beforeResult,
+  .afterResult {
+    grid-column: 1 / -1;
+    border-radius: 0 0 20px 20px; /* round bottom */
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .header h1 {
+    font-size: 1.2rem;
+  }
+
+  .submit-btn {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+  }
+
+  .afterResult .result-info h2 {
+    font-size: 1.2rem;
+  }
+
+  .afterResult .resul-for-month #total-1 {
+    font-size: 2rem;
+  }
+}
+
+
+.form-control,
+.input-group-text {
+  font-size: 0.9rem;
+  padding: 0.6rem;
+}
+
