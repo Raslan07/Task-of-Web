@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+.inter{
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+}
+
+body{
+    margin: 0;
+    background-color: rgba(199, 199, 199, 0.9);
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-image: 
+    repeating-linear-gradient(to right  , transparent 0 50px , rgba(0, 90, 129, 0.067) 50px  51px ) ,
+    repeating-linear-gradient(to bottom  , transparent 0 50px , rgba(0, 84, 121, 0.067) 50px  51px );
+}
+
+
+.container{
+    width: clamp(250px , 100% , 400px);
+    height: 70vh;
+    margin: 50px auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 0px 0px 5px hsl(0 0 0 / 0.4);
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+h1{
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+    width: 100%;
+    height: 70px;
+    font-weight: 800;
+}
+
+#reg-form{
+    width: 100% ;
+    display: flex;
+    justify-content: flex-start;
+    align-items:center;
+    flex-direction: column;
+    color: hsl(0 0 0 / 0.7);
+    
+}
+
+.form-group{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 5px;
+    padding: 5px;
+    font-weight: 600;
+    position: relative;
+}
+
+button{
+    width: calc(100% - 60px);
+    height: 45px;
+    text-align: center;
+    margin: 0 auto;
+    background-color: #3598DB;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    box-shadow: 0 0 5px hsl(0 0 0 / 0.4);
+    margin-top: 10px;
+}
+
+button:hover{
+    background-color: #2c7db4;
+    transform: scale(0.97);
+    
+}
+
+label{
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 2px;
+}
+input{
+    width: 100%;
+    height: 40px;
+    border: 1px solid hsl(0 0 0 / 0.2) ;
+    border-radius: 3px;
+    font-weight: 500;
+}
+input:focus{
+    border-color: #3498db;
+    border: none;
+    outline: none;
+}
+small{
+    visibility: hidden;
+    position: absolute;
+    bottom: -12px;
+    left: 1;
+    font-size: 12px;
+    text-transform: capitalize;
+    color: hsla(0, 100%, 50%, 0.537);
+}
+
+
+.form-group.erorr input{
+    border-color: red;
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+.form-group.error small{
+    color:red;
+    visibility: visible;
+}
+
+.form-group.success input {
+    border-color: green;
+    overflow: hidden;
+    border-radius: 3px;
+}
