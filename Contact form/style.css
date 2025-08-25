@@ -1,0 +1,170 @@
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+/* --- Variables and Base Styles --- */
+:root {
+    --primary-green: #0C7D69;
+    --medium-green: #E2F1E7;
+    --border-green: #bfdac8;
+    --text-dark: #333;
+    --text-light: #fff;
+    --background-light: #fff;
+    --error-red: #d73c3c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--medium-green);
+    font-family: "Inter", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-dark);
+    padding: 1rem;
+}
+
+/* --- Form Container --- */
+form {
+    background-color: var(--background-light);
+    width: 100%;
+    max-width: 720px;
+    border-radius: 12px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+h1 {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+}
+
+/* --- Form Groups & Layout --- */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group-row {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Make first/last name stack on mobile */
+@media (max-width: 600px) {
+    .form-group-row {
+        flex-direction: column;
+    }
+}
+
+.form-group-row > div {
+    flex: 1; /* Each item takes equal space */
+}
+
+/* --- Form Elements Styling --- */
+input[type="text"],
+input[type="email"],
+textarea {
+    height: 45px;
+    border: 1px solid var(--border-green);
+    border-radius: 7px;
+    padding: 0 1rem;
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+textarea {
+    height: auto;
+    padding: 1rem;
+    resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--primary-green);
+    box-shadow: 0 0 0 2px var(--medium-green);
+}
+
+/* --- Radio and Checkbox Styling --- */
+.radio-group, .checkbox-group {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--border-green);
+    border-radius: 7px;
+    height: 45px;
+    padding: 0 1rem;
+    cursor: pointer;
+}
+
+.radio-group label, .checkbox-group label {
+    margin-left: 0.75rem;
+    font-size: 0.9rem;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--primary-green);
+}
+
+/* --- Button Styling --- */
+button {
+    width: 100%;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 7px;
+    height: 50px;
+    background-color: var(--primary-green);
+    color: var(--text-light);
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #085a4a;
+}
+
+/* --- Validation and Success Message --- */
+.error-message {
+    color: var(--error-red);
+    font-size: 0.8rem;
+    min-height: 1em; /* Prevents layout shift */
+}
+
+input.error, textarea.error {
+    border-color: var(--error-red);
+}
+
+#success-message {
+    background-color: var(--background-light);
+    text-align: left;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 500px;
+}
+
+#success-message .icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+#success-message h2 {
+    color: var(--primary-green);
+    margin-bottom: 0.5rem;
+}
+
+.hidden {
+    display: none;
+}
