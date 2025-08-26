@@ -237,39 +237,3 @@ li {
                 grid-template-columns: 1fr;
             }
         }
-
-
-
-
-
-
-/* Footer Section */
-
-footer{
-    display: flex;
-    justify-content: space-between;
-    grid-column: 1 / 11;
-    grid-row: 8 / 10;
-}
-
-footer .last{
-    display: flex;
-    width: calc(100% / 3);
-}
-
-footer .last .detailes{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-left: 30px;
-}
-
-footer .last .detailes h3{
-    font-size: 45px;
-    color: #F15E4E;
-}
-
-footer .last .detailes h2{
-    font-size: 25px;
-    font-weight: 900;
-}
