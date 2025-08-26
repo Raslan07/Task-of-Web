@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-optical-sizing: auto;
+    color: white;
+}
+
+body{
+    min-height: 100vh;
+    width: 100%;
+    max-width: 720px;
+    background-color: #0d1b2a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.animation{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 480px;
+    height: 400px;
+    background-color: #1b263b;
+    border-radius: 13px;
+    position: relative;
+    
+}
+@property --angel{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+
+.animation::after , 
+.animation::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: conic-gradient(from var(--angel),#ef476f , #ffd166 , #06d6a0 , #118ab2 , #11c4ff ,#ef476f);
+    border-radius: 13px;
+    z-index: -1;
+    padding: 3px;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    animation: 5s spin linear infinite;
+}
+
+.animation::before{
+    filter: blur(1.5rem);
+    opacity: 0.6;
+}
+@keyframes spin {
+    form{
+        --angel : 0deg;
+    }
+    to{
+        --angel : 360deg;
+    }
+}
+h1{
+    font-weight:900 ;
+    font-size: 40px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+p{
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.342);
+    line-height: 1.5;
+    padding: 10px;
+}
