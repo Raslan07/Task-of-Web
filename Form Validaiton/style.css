@@ -17,10 +17,10 @@
 
 body{
     margin: 0;
-    background-color: rgba(199, 199, 199, 0.9);
     width: 100vw;
     height: 100vh;
     overflow: hidden;
+    background-color: rgba(199, 199, 199, 0.9);
     background-image: 
     repeating-linear-gradient(to right  , transparent 0 50px , rgba(0, 90, 129, 0.067) 50px  51px ) ,
     repeating-linear-gradient(to bottom  , transparent 0 50px , rgba(0, 84, 121, 0.067) 50px  51px );
