@@ -48,8 +48,8 @@ header h1 {
   margin-bottom: 10px;
   background: linear-gradient(to right, var(--primary-color), var(--primary-light));
   display: inline-block;
-  background-clip: text;
   -webkit-background-clip: text; /* For  SAFARI*/
+  background-clip: text;
   color: transparent;
 }
 
